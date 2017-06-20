@@ -1,0 +1,3 @@
+---
+ - name: copy a file
+   copy: src={{ cp_src }} dest={{ cp_dest }}

@@ -1,0 +1,10 @@
+---
+- name: this is the 1st playbook
+  hosts: localhost
+  remote_user: root
+  become: true
+  tasks:
+    - include: cp.yml
+      vars:
+        cp_src: /tmp/a.txt
+        cp_dest: /tmp/dumps

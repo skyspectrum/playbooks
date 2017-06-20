@@ -1,0 +1,9 @@
+---
+- name: loop test
+  hosts: localhost
+  remote_user: root
+  become: true
+  become_method: sudo
+  tasks:
+    - name: create user jiajia
+      user: name=jiajia state=absent group=staff

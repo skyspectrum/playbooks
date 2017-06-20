@@ -1,0 +1,8 @@
+---
+- hosts: ~.*
+  become: root
+  become_method: sudo
+  tasks:
+    - command: echo {{ item }}
+      with_items: [ 1, 3, 5, 7, 8 ]
+      when: item < 5

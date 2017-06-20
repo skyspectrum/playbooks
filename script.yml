@@ -1,0 +1,7 @@
+- name: remote run script
+  hosts: ~.*
+  remote_user: root
+  become: true
+  tasks:
+    - name: run script
+      script: ./ls.sh

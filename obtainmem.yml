@@ -1,0 +1,12 @@
+---
+- name: obtain mem
+  hosts: ~.*
+  remote_user: root
+  become: true
+  tasks:
+    - name: obtain free if is linux
+      raw: free -m
+      when: ansible_system != 'Darwin'
+    - name: obtain top -l 1 for mac
+      raw: top -l 1 | grep -i physmem
+      when: ansible_system == 'Darwin'

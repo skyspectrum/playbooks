@@ -1,0 +1,10 @@
+
+2and1
+2and3
+2and7
+4and1
+4and3
+4and7
+6and1
+6and3
+6and7
